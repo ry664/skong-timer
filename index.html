@@ -26,7 +26,7 @@
     const dataC   = document.getElementById("silkChance");
 
     function start(){
-        const time = 1758175200000 - Date.now();
+        const time = 1758175200000 - (Date.now() - 1.08e+8);
         dataMS.innerHTML  = time.toLocaleString()                       + " Milliseconds";
         dataS.innerHTML   = Math.floor((time/1000)).toLocaleString()    + " Seconds";
         dataMin.innerHTML = Math.floor((time/60000)).toLocaleString()   + " Minutes";

@@ -1,0 +1,40 @@
+<style>
+    p {
+  margin: auto;
+  width: 50%;
+  border: 3px solid rgb(65, 65, 65);
+  font-size: 35;
+  padding: 10px;
+}
+</style>
+<p style="font-size: 60;">Time Until Silksong</p>
+<p id="silkMS"></p>
+<p id="silkS"></p>
+<p id="silkMin"></p>
+<p id="silkH"></p>
+<p id="silkD"></p>
+<p id="silkM"></p>
+<p id="silkChance"></p>
+<script>
+    window.onload = start;
+    const dataMS  = document.getElementById("silkMS");
+    const dataS   = document.getElementById("silkS");
+    const dataMin = document.getElementById("silkMin");
+    const dataH   = document.getElementById("silkH");
+    const dataD   = document.getElementById("silkD");
+    const dataM   = document.getElementById("silkM");
+    const dataC   = document.getElementById("silkChance");
+
+    function start(){
+        const time = 1758175200000 - Date.now();
+        dataMS.innerHTML  = time.toLocaleString()                       + " Milliseconds";
+        dataS.innerHTML   = Math.floor((time/1000)).toLocaleString()    + " Seconds";
+        dataMin.innerHTML = Math.floor((time/60000)).toLocaleString()   + " Minutes";
+        dataH.innerHTML   = Math.floor((time/3.6e+6)).toLocaleString()  + " Hours";
+        dataD.innerHTML   = Math.floor((time/8.64e+7)).toLocaleString() + " Days";
+        dataM.innerHTML   = Math.floor((time/2.628e+9)).toLocaleString()+ " Months";
+        const days = (1758175200 - Date.now()/1000)/60/60/24;
+        dataC.innerHTML   = `${Math.floor((1/days)*10000)/100}% release chance`
+        setTimeout(start);
+    }
+</script>

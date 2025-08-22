@@ -13,7 +13,6 @@
 <p id="silkMin"></p>
 <p id="silkH"></p>
 <p id="silkD"></p>
-<p id="silkM"></p>
 <script>
     window.onload = start;
     const dataMS  = document.getElementById("silkMS");
@@ -21,7 +20,6 @@
     const dataMin = document.getElementById("silkMin");
     const dataH   = document.getElementById("silkH");
     const dataD   = document.getElementById("silkD");
-    const dataM   = document.getElementById("silkM");
 
     function start(){
         const time = 1757048400000 - Date.now();
@@ -30,8 +28,7 @@
         dataMin.innerHTML = Math.floor((time/60000)).toLocaleString()   + " Minutes";
         dataH.innerHTML   = Math.floor((time/3.6e+6)).toLocaleString()  + " Hours";
         dataD.innerHTML   = Math.floor((time/8.64e+7)).toLocaleString() + " Days";
-        dataM.innerHTML   = Math.floor((time/2.628e+9)).toLocaleString()+ " Months";
-        
+      
         setTimeout(start);
     }
 </script>

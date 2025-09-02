@@ -27,7 +27,7 @@
         dataS.innerHTML   = Math.floor((time/1000)).toLocaleString()    + " Seconds";
         dataMin.innerHTML = Math.floor((time/60000)).toLocaleString()   + " Minutes";
         dataH.innerHTML   = Math.floor((time/3.6e+6)).toLocaleString()  + " Hours";
-        dataD.innerHTML   = Math.floor((time/8.64e+7)).toLocaleString() + " Days";
+        dataD.innerHTML   = Math.ceil((time/8.64e+7)).toLocaleString() + " Days";
       
         setTimeout(start);
     }
